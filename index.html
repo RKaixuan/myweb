@@ -1,71 +1,174 @@
-
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="zh">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>轮播插件</title>
-  <link rel="stylesheet" href="lb.css">
-  <script src="lb.js"></script>
-  <script>
-    window.onload = function () {
-      // 轮播选项
-      const options = {
-        id: 'lb-1',              // 轮播盒ID
-        speed: 600,              // 轮播速度(ms)
-        delay: 3000,             // 轮播延迟(ms)
-        direction: 'left',       // 图片滑动方向
-        moniterKeyEvent: true,   // 是否监听键盘事件
-        moniterTouchEvent: true  // 是否监听屏幕滑动事件
-      }
-      const lb = new Lb(options);
-      lb.start();
-    }
-  </script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery全屏圆形导航轮播图布局特效</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
 </head>
-
 <body>
-  <div class="lb-box" id="lb-1">
-    <!-- 轮播内容 -->
-    <div class="lb-content">
-      <div class="lb-item active">
-        <a href="#">
-          <img src="images/t1.png" alt="picture loss">
-          <span>Description 1</span>
-        </a>
-      </div>
-      <div class="lb-item">
-        <a href="#">
-          <img src="images/t2.png" alt="picture loss">
-          <span>Description 2</span>
-        </a>
-      </div>
-      <div class="lb-item">
-        <a href="#">
-          <img src="images/t3.png" alt="picture loss">
-          <span>Description 3</span>
-        </a>
-      </div>
-      <div class="lb-item">
-        <a href="#">
-          <img src="images/t4.png" alt="picture loss">
-          <span>Description 4</span>
-        </a>
-      </div>   
-    </div>
-    <!-- 轮播标志 -->
-    <ol class="lb-sign">
-      <li class="active">1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-    </ol>
-    <!-- 轮播控件 -->
-    <div class="lb-ctrl left">＜</div>
-    <div class="lb-ctrl right">＞</div>
-  </div>
-</body>
 
+	<!-- coidea:loader START -->
+    <div class="loader">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- coidea:loader END -->
+
+
+    <!-- slideshow START -->
+    <section class="slideshow">
+
+      <!-- slideshow:navigation START -->
+      <ul class="navigation">
+
+        <!-- slideshow:navigation:item START -->
+        <li class="navigation-item active">
+          <span class="rotate-holder"></span>
+          <span class="background-holder" style="background-image: url(assets/img/1.jpg);"></span>
+        </li>
+        <!-- slideshow:navigation:item END -->
+
+        <!-- slideshow:navigation:item START -->
+        <li class="navigation-item">
+          <span class="rotate-holder"></span>
+          <span class="background-holder" style="background-image: url(assets/img/2.jpg);"></span>
+        </li>
+        <!-- slideshow:navigation:item END -->
+
+        <!-- slideshow:navigation:item START -->
+        <li class="navigation-item">
+          <span class="rotate-holder"></span>
+          <span class="background-holder" style="background-image: url(assets/img/3.jpg);"></span>
+        </li>
+        <!-- slideshow:navigation:item END -->
+
+        <!-- slideshow:navigation:item START -->
+        <li class="navigation-item">
+          <span class="rotate-holder"></span>
+          <span class="background-holder" style="background-image: url(assets/img/4.jpg);"></span>
+        </li>
+        <!-- slideshow:navigation:item END -->
+
+        <!-- slideshow:navigation:item START -->
+        <li class="navigation-item">
+          <span class="rotate-holder"></span>
+          <span class="background-holder" style="background-image: url(assets/img/5.jpg);"></span>
+        </li>
+        <!-- slideshow:navigation:item END -->
+
+        <!-- slideshow:navigation:item START -->
+        <li class="navigation-item">
+          <span class="rotate-holder"></span>
+          <span class="background-holder" style="background-image: url(assets/img/img6.jpg);"></span>
+        </li>
+        <!-- slideshow:navigation:item END -->
+
+        <!-- slideshow:navigation:item START -->
+        <li class="navigation-item">
+          <span class="rotate-holder"></span>
+          <span class="background-holder" style="background-image: url(assets/img/img7.jpg);"></span>
+        </li>
+        <!-- slideshow:navigation:item END -->
+
+        <!-- slideshow:navigation:item START -->
+        <li class="navigation-item">
+          <span class="rotate-holder"></span>
+          <span class="background-holder" style="background-image: url(assets/img/img8.jpg);"></span>
+        </li>
+        <!-- slideshow:navigation:item END -->
+
+        <!-- slideshow:navigation:item START -->
+        <li class="navigation-item">
+          <span class="rotate-holder"></span>
+          <span class="background-holder" style="background-image: url(assets/img/img9.jpg);"></span>
+        </li>
+        <!-- slideshow:navigation:item END -->
+
+      </ul>
+      <!-- slideshow:navigation END -->
+
+
+      <!-- slideshow:details START -->
+      <div class="detail">
+      
+        <!-- slideshow:details START -->
+        <div class="detail-item active">
+          <div class="headline">One</div>
+          <div class="background" style="background-image: url(assets/img/1.jpg)"></div>
+        </div>
+        <!-- slideshow:details END -->
+        
+        <!-- slideshow:details START -->
+        <div class="detail-item">
+          <div class="headline">Two</div>
+          <div class="background" style="background-image: url(assets/img/2.jpg);"></div>
+        </div>
+        <!-- slideshow:details END -->
+        
+        <!-- slideshow:details START -->
+        <div class="detail-item">
+          <div class="headline">Three</div>
+          <div class="background" style="background-image: url(assets/img/3.jpg);"></div>
+        </div>
+        <!-- slideshow:details END -->
+        
+        <!-- slideshow:details START -->
+        <div class="detail-item">
+          <div class="headline">Four</div>
+          <div class="background" style="background-image: url(assets/img/4.jpg);"></div>
+        </div>
+        <!-- slideshow:details END -->
+        
+        <!-- slideshow:details START -->
+        <div class="detail-item">
+          <div class="headline">Five</div>
+          <div class="background" style="background-image: url(assets/img/5.jpg);"></div>
+        </div>
+        <!-- slideshow:details END -->
+        
+        <!-- slideshow:details START -->
+        <div class="detail-item">
+          <div class="headline">Six</div>
+          <div class="background" style="background-image: url(assets/img/img6.jpg);"></div> 
+        </div>
+        <!-- slideshow:details END -->
+        
+        <!-- slideshow:details START -->
+        <div class="detail-item">
+          <div class="headline">Seven</div>
+          <div class="background" style="background-image: url(assets/img/img7.jpg);"></div>
+        </div>
+        <!-- slideshow:details END -->
+        
+        <!-- slideshow:details START -->
+        <div class="detail-item">
+          <div class="headline">Eight</div>
+          <div class="background" style="background-image: url(assets/img/img8.jpg);"></div>
+        </div>
+        <!-- slideshow:details END -->
+        
+        <!-- slideshow:details START -->
+        <div class="detail-item">
+          <div class="headline">Nine</div>
+          <div class="background" style="background-image: url(assets/img/img9.jpg);"></div>
+        </div>
+        <!-- slideshow:details END -->
+        
+      </div>
+      <!-- slideshow:details END -->
+
+    </section>
+    <!-- slideshow END -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/CSSPlugin.min.js"></script>
+    <script src="assets/js/TextPlugin.min.js"></script>
+    <script src="assets/js/demo.js"></script>
+	
+</body>
 </html>
